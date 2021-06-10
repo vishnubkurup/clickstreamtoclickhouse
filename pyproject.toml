@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "seghouse"
+version = "0.18.0"
+description = ""
+authors = ["Dinesh Sawant <dineshsawant300@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7.1"
+clickhouse-driver = {extras = ["lz4", "zstd", "numpy"], version = "^0.2.0"}
+click = "^7.1.2"
+PyYAML = "^5.3.1"
+pyhumps = "^1.6.1"
+pandas = "^1.2.0"
+tabulate = "^0.8.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.1"
+black = "^20.8b1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+seghouse = "seghouse.app:app"
